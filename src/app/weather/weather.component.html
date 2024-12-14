@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <h1 class="display-4">Check The Weather</h1>
+  <div class="input-group mb-3">
+    <input [(ngModel)]="city" class="form-control" placeholder="Enter city" />
+    <div class="input-group-append">
+      <button (click)="getWeatherDetails()" class="btn btn-primary">Get Weather</button>   <!-- event binding = when Get Weather is clicked getWeather is called-->
+    </div>
+  </div>
+  <div *ngIf="weatherData">
+    <h2 class="text-primary">Weather in {{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
+    <p class="text-success">Temperature: {{ (weatherData.main.temp - 273.15).toFixed(2) }} °C</p>
+    <p class="text-info">Conditions: {{ weatherData.weather[0].description }}</p>
+  </div>
+
+</div>

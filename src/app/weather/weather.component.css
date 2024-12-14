@@ -1,0 +1,12 @@
+/* Add custom CSS styles for the Weather Component */
+.weather-title {
+  color: #167d0f; /* Customize the color */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.weather-info {
+  color: #a02c36; /* Customize the color */
+  font-size: 18px;
+}
+
